@@ -9,7 +9,7 @@ Maybe you want to…
 * Keep a count for a scope of the association, like just the “positive reactions”, or the “completed orders”.
 * Cache a sum or another calculation like the “account balance”
 
-There are different techniques for caching this kind of values, but sometimes this time of calculation are prone to race conditions.
+There are different techniques for caching this kind of values, but sometimes this type of calculation are prone to race conditions.
 
 Here I want share a tool to help you understand why caching this kind of values are prone to race conditions, analyzing different ways to solve the “account balance” problem. Thinking maybe it could help you extrapolate to other situations.
 
