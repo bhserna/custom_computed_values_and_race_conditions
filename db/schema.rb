@@ -1,15 +1,17 @@
 require_relative "config"
 
-# ActiveRecord::Schema.define(version: 1) do
-#   create_table :posts, if_not_exists: true do |t|
-#     t.column :title, :string
-#     t.column :body, :text
-#   end
+ActiveRecord::Schema.define do
+  create_table :accounts do |t|
+    t.integer :balance, default: 0
+    t.integer :entries_count
+    t.timestamps
+  end
 
-#   create_table :comments, if_not_exists: true do |t|
-#     t.column :body, :text
-#     t.column :post_id, :integer
-#   end
+  create_table :entries do |t|
+    t.integer :account_id
+    t.integer :amount
+    t.timestamps
+  end
 
-#   add_index :comments, :post_id, if_not_exists: true
-# end
+  add_index :entries, :account_id
+end

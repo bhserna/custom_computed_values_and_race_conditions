@@ -1,5 +1,5 @@
 # require "ffaker"
-# require_relative "config"
+require_relative "config"
 # require_relative "../lib/models"
 
 # def create_list(klass, count:, &block)
@@ -21,3 +21,8 @@
 # create_list_for_each_record(Comment, records: posts, count: 20) do |post|
 #   { post_id: post.id, body: FFaker::CheesyLingo.sentence }
 # end
+
+class Account < ActiveRecord::Base
+end
+
+Account.create

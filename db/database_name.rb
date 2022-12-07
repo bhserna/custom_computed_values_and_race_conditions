@@ -1,1 +1,1 @@
-DATABASE_NAME = "example_name"
+DATABASE_NAME = "custom_computed_values"
