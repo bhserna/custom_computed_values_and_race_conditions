@@ -1,5 +1,3 @@
-require "fiber"
-
 class SerialTransaction
   def self.run_many_times(count)
     count.times.map { run }.map(&:to_f)
